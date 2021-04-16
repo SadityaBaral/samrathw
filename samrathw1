@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int a, sad, bad;
+
+
+    printf("please enter a number :  ");
+
+    scanf("%d",&a);
+
+    sad = a%5;
+
+    bad = a%7;
+
+
+     printf("%d\n",sad);
+     printf("%d\n",bad);
+
+    if (sad==0)
+    {
+        printf("the given number is divisible by 5 : ");
+
+    }
+
+    if(bad==0)
+    {
+        printf("the given number is divisible by 7 : ");
+
+    }
+
+
+    else
+
+    {
+        printf("neither divisible by 5 nor by 7 : ");
+
+    }
+
+    return 0;
+}

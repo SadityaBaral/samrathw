@@ -1,40 +1,77 @@
+ // I might be kinda harsh when checking through your code
+// but it is for your development, so dont take my comments negatively
+// overall, you have done well... I am proud of you
+
+
 #include<stdio.h>
 int main()
 {
-    int a, sad, bad;
 
+    // variable names should be based on content so that the programmer could understand what they represent...
+    // for example, i cant understand what these 'a', 'sad', 'bad' variables represent....
+    int userInput;
 
-    printf("please enter a number :  ");
+    // i explicitly asked you to use an infinite loop to ask user for input and process it
+    // using infinite while loop
+    
+    while(1){
+    
+        // ask user for an input
+        // i will be using your code which are well written and correct, for eg: the code below
+        // '\n' is for new line character
+        printf("\n\nplease enter a number :  ");
+        scanf("%d",&userInput);
 
-    scanf("%d",&a);
+        if (userInput == 0){
+            printf("\nplease input any other number than 0");
 
-    sad = a%5;
+        }
 
-    bad = a%7;
+         // check if the user input is divisible by 5 or 7 or both or none 
+         else if ((userInput % 5 == 0) && (userInput % 7 == 0)) // this code was well written
+        {
 
+            // this code is well written
+            printf("\nthe given number is divisible by 5 and 7 both ");
 
-     printf("%d\n",sad);
-     printf("%d\n",bad);
+        }
 
-    if (sad==0)
-    {
-        printf("the given number is divisible by 5 : ");
+        // you should have used 'else if ' instead of 'if',
+        // this is how if else works,
+        // first the code is checked in 'if' statement, if the if statement returns false, then the code is checked in else if and then in else
+        // what you did was, you checked the code for 5 in if statement, then again checked in another 'if' statement, 
+        // you will get bug by using such double 'if' statements while checking if the num  is divisible by both 7 and 5
+        else if(userInput % 7 == 0)
+        {
+            // this code is well written
+            printf("\nthe given number is divisible by 7 ");
+        }
+        
+        // check if the number is divisible by both 5
+        else if ( userInput % 5 == 0 )
+        {
+            printf("\nThe given number is divisible by 5");
+        
+        }
+        
+        
+        // if the number is not divisible by either 5 or 7, end the loop and also the program
+        
+
+        else {
+            // this code is well written
+            printf("\nthe given number neither divisible by 5 nor by 7 \nending the program");
+            
+            
+            // break while loop
+            break;
+   
+        }
 
     }
-
-    if(bad==0)
-    {
-        printf("the given number is divisible by 7 : ");
-
-    }
-
-
-    else
-
-    {
-        printf("neither divisible by 5 nor by 7 : ");
-
-    }
-
+         
+         
+    // this code is well written 
     return 0;
+
 }
